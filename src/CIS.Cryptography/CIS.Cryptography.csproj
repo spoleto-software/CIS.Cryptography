@@ -33,6 +33,12 @@
       <!--<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
   </PropertyGroup>
 
+    <PropertyGroup>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>Cryptography, Windows, Certificate</PackageTags>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
     <!-- Include the dlls into Nuget package -->
     <ItemGroup>
         <Content Include="..\..\lib\Interop.CA*.dll">
