@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+      <AssemblyName>CIS.Cryptography</AssemblyName>
+      <PackageId>CIS.Cryptography</PackageId>
+      <RootNamespace>CIS.Cryptography</RootNamespace>
+      <Title>CIS.Cryptography</Title>
+      <Description>CIS project for Windows cryptography API via Interop.</Description>
+      <Authors>Cashmere developers.</Authors>
+      <Company>Cashmere soft.</Company>
+      <PackageLicenseUrl></PackageLicenseUrl>
+      <PackageProjectUrl></PackageProjectUrl>
+      <RepositoryUrl>/</RepositoryUrl>
+      <PackageTags></PackageTags>
+      <PackageReleaseNotes></PackageReleaseNotes>
+      <SignAssembly>False</SignAssembly>
+      <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+      <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+      <Copyright>Copyright © $([System.DateTime]::Now.Year.ToString())</Copyright>
+      <Version>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</Version>
+      <AssemblyVersion>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</AssemblyVersion>
+      <FileVersion>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</FileVersion>
+	  <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- Include symbols for debugging -->
+  <PropertyGroup>
+      <!-- This command creates external file (snupkg) with .pdb next to nuget file (nupkg) -->
+      <IncludeSymbols>true</IncludeSymbols>
+      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+      <!-- This command includes .pdb into nuget file (nupkg) -->
+      <!--<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
+  </PropertyGroup>
+
+    <!-- Include the dlls into Nuget package -->
+    <ItemGroup>
+        <Content Include="..\..\lib\Interop.CA*.dll">
+            <Pack>true</Pack>
+            <PackagePath>lib\$(TargetFramework)</PackagePath>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+    <Reference Include="Interop.CAdESCOM">
+      <HintPath>..\..\lib\Interop.CAdESCOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.CAPICOM">
+      <HintPath>..\..\lib\Interop.CAPICOM.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
