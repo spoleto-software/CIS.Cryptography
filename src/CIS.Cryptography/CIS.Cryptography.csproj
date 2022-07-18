@@ -3,12 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
       <AssemblyName>CIS.Cryptography</AssemblyName>
-      <PackageId>CIS.Cryptography</PackageId>
+      <PackageId>Spoleto.CIS.Cryptography</PackageId>
       <RootNamespace>CIS.Cryptography</RootNamespace>
       <Title>CIS.Cryptography</Title>
-      <Description>CIS project for Windows cryptography API via Interop.</Description>
-      <Authors>Cashmere developers.</Authors>
-      <Company>Cashmere soft.</Company>
+      <Description>The project for Windows cryptography API via Interop.</Description>
+      <Authors>SPOLETO Software developers</Authors>
+      <Company>SPOLETO Software soft</Company>
       <PackageLicenseUrl></PackageLicenseUrl>
       <PackageProjectUrl></PackageProjectUrl>
       <RepositoryUrl>/</RepositoryUrl>
