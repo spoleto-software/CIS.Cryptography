@@ -25,7 +25,6 @@
 		<PackageId>Spoleto.CIS.Cryptography</PackageId>
 		<Authors>Spoleto-Software</Authors>
         <Company>SPOLETO Software Development</Company>
-		<PackageIcon>MainIcon.png</PackageIcon>
         <PackageLicenseUrl></PackageLicenseUrl>
         <PackageProjectUrl>https://spoleto.ru</PackageProjectUrl>
         <RepositoryUrl>https://github.com/spoleto-software/CIS.Cryptography</RepositoryUrl>
