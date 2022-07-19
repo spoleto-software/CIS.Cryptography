@@ -3,24 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
       <AssemblyName>CIS.Cryptography</AssemblyName>
-      <PackageId>Spoleto.CIS.Cryptography</PackageId>
       <RootNamespace>CIS.Cryptography</RootNamespace>
       <Title>CIS.Cryptography</Title>
-      <Description>The project for Windows cryptography API via Interop.</Description>
-      <Authors>SPOLETO Software developers</Authors>
-      <Company>SPOLETO Software soft</Company>
-      <PackageLicenseUrl></PackageLicenseUrl>
-      <PackageProjectUrl></PackageProjectUrl>
-      <RepositoryUrl>/</RepositoryUrl>
-      <PackageTags></PackageTags>
-      <PackageReleaseNotes></PackageReleaseNotes>
       <SignAssembly>False</SignAssembly>
       <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
       <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-      <Copyright>Copyright © $([System.DateTime]::Now.Year.ToString())</Copyright>
-      <Version>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</Version>
-      <AssemblyVersion>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</AssemblyVersion>
-      <FileVersion>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</FileVersion>
 	  <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
@@ -29,15 +16,30 @@
       <!-- This command creates external file (snupkg) with .pdb next to nuget file (nupkg) -->
       <IncludeSymbols>true</IncludeSymbols>
       <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-      <!-- This command includes .pdb into nuget file (nupkg) -->
-      <!--<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>-->
   </PropertyGroup>
-
-    <PropertyGroup>
-        <RepositoryType>git</RepositoryType>
-        <PackageTags>Cryptography, Windows, Certificate</PackageTags>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    </PropertyGroup>
+    
+	<!-- Package info -->
+	<PropertyGroup>
+		<Product>CIS.Cryptography library</Product>
+		<Description>The project for Windows cryptography API via Interop.</Description>
+		<PackageId>Spoleto.CIS.Cryptography</PackageId>
+		<Authors>Spoleto-Software</Authors>
+        <Company>SPOLETO Software Development</Company>
+		<PackageIcon>MainIcon.png</PackageIcon>
+        <PackageLicenseUrl></PackageLicenseUrl>
+        <PackageProjectUrl>https://spoleto.ru</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/spoleto-software/CIS.Cryptography</RepositoryUrl>
+        <PackageReleaseNotes></PackageReleaseNotes>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>Cryptography, Windows, Certificate</PackageTags>
+		<Copyright>Copyright © $([System.DateTime]::Now.Year.ToString())</Copyright>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<Version>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</Version>
+		<AssemblyVersion>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</AssemblyVersion>
+		<FileVersion>$([System.DateTime]::Now.AddYears(-2020).Year.ToString()).$([System.DateTime]::Now.ToString("MM.dd.HHmm"))</FileVersion>
+	</PropertyGroup>    
 
     <!-- Include the dlls into Nuget package -->
     <ItemGroup>
@@ -45,6 +47,12 @@
             <Pack>true</Pack>
             <PackagePath>lib\$(TargetFramework)</PackagePath>
         </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="..\..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
 
     <ItemGroup>
